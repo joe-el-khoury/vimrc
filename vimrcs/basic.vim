@@ -246,11 +246,16 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove 
 map <leader>t<leader> :tabnext 
 
+" Some nice tab navigation
+map <leader>t<up> :tabr<cr>
+map <leader>t<down> :tabl<cr>
+map <leader>t<left> :tabp<cr>
+map <leader>t<right> :tabn<cr>
+
 " Let 'tl' toggle between this and the last accessed tab
 let g:lasttab = 1
 nmap <Leader>tl :exe "tabn ".g:lasttab<CR>
 au TabLeave * let g:lasttab = tabpagenr()
-
 
 " Opens a new tab with the current buffer's path
 " Super useful when editing files in the same directory
