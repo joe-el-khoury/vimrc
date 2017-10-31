@@ -140,6 +140,8 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+set foldlevel=99
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -150,7 +152,8 @@ syntax enable
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
-elseif $TERM == 'screen'
+endif
+if $TERM == 'screen'
     set t_Co=256
 endif
 
@@ -197,6 +200,7 @@ set smarttab
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2
 
 " Linebreak on 500 characters
 set lbr
