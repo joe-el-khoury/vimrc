@@ -202,6 +202,9 @@ set shiftwidth=2
 set tabstop=2
 autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2
 
+" Python should use 2 spaces
+autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2
+
 " Linebreak on 500 characters
 set lbr
 set tw=500
